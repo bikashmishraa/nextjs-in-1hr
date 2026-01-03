@@ -1,6 +1,8 @@
 export const user = [
  { id: 1, name: 'John Doe' },
  { id: 2, name: 'Jane Smith' },
+ { id: 3, name: 'Janam Smith' },
+ { id: 4, name: 'Janeman Smith' },
 ]
 
 export async function GET()
