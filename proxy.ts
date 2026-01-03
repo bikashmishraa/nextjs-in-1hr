@@ -1,6 +1,12 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-export default clerkMiddleware();
+const isloggedIn = createRouteMatcher("/mock-users");
+
+export default clerkMiddleware(async (auth, req) =>{
+
+  if(isloggedIn(req) ) await auth.protect()
+}
+)
 
 export const config = {
   matcher: [

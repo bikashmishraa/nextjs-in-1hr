@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
+import { useAuth, useUser } from '@clerk/nextjs';
 
 const Counter = () => {
 
